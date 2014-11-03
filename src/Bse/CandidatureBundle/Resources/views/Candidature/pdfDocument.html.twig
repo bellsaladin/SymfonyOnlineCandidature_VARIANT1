@@ -35,16 +35,9 @@
     <tr>    	
 	    <td colspan="4"><br/></td>
     </tr>
-    <tr style="line-height:12px"><td colspan="4"><h2>Filières choisies</h2><hr/></td></tr>
-    <tr>    	
-	    <td colspan="4">
-	    	<ul>
-		    {% for filiereChoosed in filieresChoosed %}
-		    <li>{{ filiereChoosed}}</li>
-		    {% endfor %}
-		    </ul>
-		    <br/>
-    	</td>	    
+    <tr style="line-height:20px">
+    	<td><b>Filière : </b></td>
+	    <td colspan="3">{{ candidature.filiere}}</td>	    
     </tr>
     <tr style="line-height:12px"><td colspan="4"><h2>Parcours d'étude</h2><hr/></td></tr>
     <tr style="line-height:20px">
@@ -75,7 +68,7 @@
 	    <td><b>Diplôme étranger :</b></td>
 	    <td>{% if candidature.diplomeEtranger == true %}Oui{% else %} Non{% endif %}</td>
     </tr>
-    <tr style="line-height:12px"><td colspan="4"><br/><h4>Notes</h4><hr/></td></tr>
+    <tr style="line-height:12px"><td colspan="4"><br/><h4>Moyennes</h4><hr/></td></tr>
     <tr style="line-height:20px">
 	    <td><b>Semestre 1: </b></td>
 	    <td>{{ candidature.noteS1|number_format(2, ',', '.') }}</td>

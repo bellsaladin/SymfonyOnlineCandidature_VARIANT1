@@ -392,8 +392,8 @@ class CandidatureController extends Controller
         // set some language-dependent strings (optional)
         $pdfObj->setLanguageArray($lg);
         $pdfObj->SetFont('dejavusans', '', 12);
-        $pdfObj->addPage();
-        
+
+
         // get values of fields stored as keys 
         
         $etablissementsArray = ArrayData::getEtablissementsData($this->get('kernel'));
@@ -405,13 +405,19 @@ class CandidatureController extends Controller
         $candidature->setPays(ArrayData::getValueUsingKey($candidature->getPays(), ArrayData::getPaysData($this->get('kernel'))) );
         $candidature->setVille(ArrayData::getValueUsingKey($candidature->getVille(), ArrayData::getVillesData($this->get('kernel'))) );
 
-        // get the html output
-        $html = $this->renderView('BseCandidatureBundle:Candidature:pdfDocument.html.twig', array(
-            'candidature'      => $candidature,            
-            'filieresChoosed' => $filieresChoosed,
-        ));
-        // output the HTML content
-        $pdfObj->writeHTML($html);
+        foreach($filieresChoosed as $filiere){
+            $pdfObj->addPage();
+            // get the html output
+            $candidature->setFiliere($filiere);
+            $html = $this->renderView('BseCandidatureBundle:Candidature:pdfDocument.html.twig', array(
+                'candidature'      => $candidature,            
+                'filieresChoosed' => $filieresChoosed,
+            ));
+            // output the HTML content
+            $pdfObj->writeHTML($html);
+        
+        }         
+
         
         $response = new Response($pdfObj->Output('document.pdf', 'I'), 200, array('Content-Type' => 'application/pdf; charset=utf-8'));
         //$response->setCharset('UTF-8');
