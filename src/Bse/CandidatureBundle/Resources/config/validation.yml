@@ -102,3 +102,12 @@ Bse\CandidatureBundle\Entity\Candidature:
         motDePasse:
             - NotBlank: 
                 message: Vous devez indiquer votre mot de passe
+        activite:
+            - NotBlank: 
+                message: Vous devez indiquer votre activité
+        systeme:
+            - NotBlank: 
+                message: Vous devez indiquer le système où vous avez obtenu votre licence
+        descriptionMemoire:
+            - NotBlank: 
+                message: Vous devez indiquer la déscription de votre mémoire

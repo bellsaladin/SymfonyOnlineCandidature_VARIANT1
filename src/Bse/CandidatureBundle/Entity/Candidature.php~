@@ -94,6 +94,13 @@ class Candidature
     /**
      * @var string
      *
+     * @ORM\Column(name="activite", type="string", length=55, nullable=true)
+     */
+    private $activite;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="etablissement_origine", type="string", length=90, nullable=true)
      */
     private $etablissementOrigine;
@@ -141,6 +148,20 @@ class Candidature
     private $anneeObtentionBac;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="description_memoire", type="text", nullable=true)
+     */
+    private $descriptionMemoire;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="systeme", type="string", length=10, nullable=true)
+     */
+    private $systeme;
+
+    /**
      * @var float
      *
      * @ORM\Column(name="note_s1", type="float", precision=10, scale=0, nullable=true)
@@ -185,7 +206,7 @@ class Candidature
     /**
      * @var string
      *
-     * @ORM\Column(name="filiere", type="string", length=150, nullable=true)
+     * @ORM\Column(name="filiere", type="text", nullable=true)
      */
     private $filiere;
 

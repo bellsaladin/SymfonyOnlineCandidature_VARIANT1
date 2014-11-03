@@ -70,7 +70,7 @@ doctrine:
 swiftmailer:
     transport: gmail
     username:  bellemallem.salaheddine
-    password:  acu_s987321e-gm  
+    password:  ooooooo
 
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'

@@ -30,6 +30,7 @@
 					<p>{{ form_errors(edit_form.prenom) }}</p>
 					<p>{{ form_errors(edit_form.dateNaissance) }}</p>
 					<p>{{ form_errors(edit_form.sexe) }}</p>
+					<p>{{ form_errors(edit_form.activite) }}</p>					
 					<p>{{ form_errors(edit_form.cne) }}</p>
 					<p>{{ form_errors(edit_form.cin) }}</p>
 					<p>{{ form_errors(edit_form.pays) }}</p>
@@ -41,6 +42,8 @@
 					<p>{{ form_errors(edit_form.anneeObtentionBac) }}</p>
 					<p>{{ form_errors(edit_form.anneeInscription) }}</p>
 					<p>{{ form_errors(edit_form.anneeObtentionLicence) }}</p>
+					<p>{{ form_errors(edit_form.descriptionMemoire) }}</p>
+					<p>{{ form_errors(edit_form.systeme) }}</p>
 					<p>{{ form_errors(edit_form.mention) }}</p>
 					<p>{{ form_errors(edit_form.filiere) }}</p>					
 					<p>{{ form_errors(edit_form.noteS1) }}</p>
@@ -104,7 +107,7 @@
 								    <div class="form-group">
 								        <label>{{ form_label(edit_form.adresse) }}</label>	        
 								        <textarea id="txt_adresse" name="{{ edit_form.adresse.vars.full_name }}" placeholder="ex : " class="form-control input-sm" required>{{ entity.adresse }}</textarea>
-								    </div>
+								    </div>								    
 								</div>									
 								<div class="col-xs-12 col-md-6 col-lg-6">									
 								    <div class="form-group">
@@ -139,6 +142,17 @@
 									        {% endfor %}
 								        </select>
 								        <input type="text" id="{{ edit_form.ville.vars.id }}" name="{{ edit_form.ville.vars.full_name }}" placeholder="Autre ville" value="{{ entity.ville }}" class="form-control input-sm" required {% if entity.pays == '350' %}style="display:none"{% endif %}/>
+								    </div>
+								    <div class="form-group">
+								        <label>Activité</label>	
+								        <p></p>
+								        <select id="{{ edit_form.activite.vars.id }}" name="{{ edit_form.activite.vars.full_name }}" class="form-control input-sm">
+								        	{% for activiteValue in activitesData %}
+								        	<option value="{{ activiteValue }}" {% if activiteValue == entity.activite %} selected {% endif %} >
+								        		{{ activiteValue }}
+								        	</option>
+								        	{% endfor %}
+								        </select>						        			    
 								    </div>
 								</div>
 							</div>
@@ -232,11 +246,30 @@
 									        </select>						        			    
 									    </div>
 									</div>
+									<div class="col-xs-4">
+										<div class="form-group">
+									        <label>Système</label>	
+									        <p></p>
+									        <select id="{{ edit_form.systeme.vars.id }}" name="{{ edit_form.systeme.vars.full_name }}" class="form-control input-sm">
+									        	{% for systemeValue in systemesData %}
+									        	<option value="{{ systemeValue }}" {% if  systemeValue == entity.systeme %} selected {% endif %} >
+									        		{{ systemeValue }}
+									        	</option>
+									        	{% endfor %}
+									        </select>						        			    
+									    </div>
+									</div>
 									{#<div class="col-xs-4">												    	
 						    			<div class="form-group" style="margin: 36px 0 0 0;">
 									        <label>Diplôme étranger ? &nbsp;&nbsp;<span>{{ form_widget(edit_form.diplomeEtranger) }}</span></label>
 									    </div>
 									</div>#}
+								</div>
+								<div class="row">
+									<div class="form-group col-xs-12">
+								        <label>Description de la mémoire</label>
+								        <textarea name="{{ edit_form.descriptionMemoire.vars.full_name }}" placeholder="" class="form-control input-sm" required>{{ entity.descriptionMemoire}}</textarea>
+									</div>
 								</div>
 								<h4>Moyennes :</h4>
 								<div class="row">

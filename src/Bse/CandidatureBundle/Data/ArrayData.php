@@ -122,6 +122,26 @@ class ArrayData
 
     }
 
+    public static function getActivitesData()
+    {
+    	$data =array(
+			'Etudiant à plein temps',
+			'Fonctionnaire au secteur public (Avec autorisation)',
+			'Fonctionnaire au secteur privé (Avec autorisation)',
+		);
+		return $data;
+
+    }
+
+    public static function getSystemesData()
+    {
+    	$data =array(
+			'LMD',
+			'Ancien'
+		);
+		return $data;
+    }
+
     public static function getMentionsData()
     {
     	$data =array(

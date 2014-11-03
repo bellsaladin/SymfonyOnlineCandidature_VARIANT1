@@ -94,6 +94,13 @@ class Candidature
     /**
      * @var string
      *
+     * @ORM\Column(name="activite", type="string", length=55, nullable=true)
+     */
+    private $activite;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="etablissement_origine", type="string", length=90, nullable=true)
      */
     private $etablissementOrigine;
@@ -139,6 +146,20 @@ class Candidature
      * @ORM\Column(name="annee_obtention_bac", type="integer", nullable=true)
      */
     private $anneeObtentionBac;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description_memoire", type="text", nullable=true)
+     */
+    private $descriptionMemoire;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="systeme", type="string", length=10, nullable=true)
+     */
+    private $systeme;
 
     /**
      * @var float
@@ -446,6 +467,29 @@ class Candidature
     }
 
     /**
+     * Set activite
+     *
+     * @param string $activite
+     * @return Candidature
+     */
+    public function setActivite($activite)
+    {
+        $this->activite = $activite;
+
+        return $this;
+    }
+
+    /**
+     * Get activite
+     *
+     * @return string 
+     */
+    public function getActivite()
+    {
+        return $this->activite;
+    }
+
+    /**
      * Set etablissementOrigine
      *
      * @param string $etablissementOrigine
@@ -604,6 +648,52 @@ class Candidature
     public function getAnneeObtentionBac()
     {
         return $this->anneeObtentionBac;
+    }
+
+    /**
+     * Set descriptionMemoire
+     *
+     * @param string $descriptionMemoire
+     * @return Candidature
+     */
+    public function setDescriptionMemoire($descriptionMemoire)
+    {
+        $this->descriptionMemoire = $descriptionMemoire;
+
+        return $this;
+    }
+
+    /**
+     * Get descriptionMemoire
+     *
+     * @return string 
+     */
+    public function getDescriptionMemoire()
+    {
+        return $this->descriptionMemoire;
+    }
+
+    /**
+     * Set systeme
+     *
+     * @param string $systeme
+     * @return Candidature
+     */
+    public function setSysteme($systeme)
+    {
+        $this->systeme = $systeme;
+
+        return $this;
+    }
+
+    /**
+     * Get systeme
+     *
+     * @return string 
+     */
+    public function getSysteme()
+    {
+        return $this->systeme;
     }
 
     /**
@@ -813,6 +903,7 @@ class Candidature
         return $this->fosuserId;
     }
 
+    
     /**
      * ####################################################################################
      * ############################        CUSTOM CODE        #############################

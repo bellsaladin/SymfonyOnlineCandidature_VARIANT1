@@ -70,6 +70,12 @@ Candidature:
             length: 100
             fixed: false
             comment: ''
+        activite:
+            type: string
+            nullable: true
+            length: 55
+            fixed: false
+            comment: ''
         etablissementOrigine:
             type: string
             nullable: true
@@ -114,6 +120,19 @@ Candidature:
             unsigned: false
             comment: ''
             column: annee_obtention_bac
+        descriptionMemoire:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+            column: description_memoire
+        systeme:
+            type: string
+            nullable: true
+            length: 10
+            fixed: false
+            comment: ''
         noteS1:
             type: float
             nullable: true
@@ -157,9 +176,9 @@ Candidature:
             comment: ''
             column: note_s6
         filiere:
-            type: string
+            type: text
             nullable: true
-            length: 150
+            length: null
             fixed: false
             comment: ''
         anneeInscription:

@@ -26,6 +26,7 @@
 					<p>{{ form_errors(form.prenom) }}</p>
 					<p>{{ form_errors(form.dateNaissance) }}</p>
 					<p>{{ form_errors(form.sexe) }}</p>
+					<p>{{ form_errors(form.activite) }}</p>					
 					<p>{{ form_errors(form.cne) }}</p>
 					<p>{{ form_errors(form.cin) }}</p>
 					<p>{{ form_errors(form.pays) }}</p>
@@ -37,6 +38,8 @@
 					<p>{{ form_errors(form.anneeObtentionBac) }}</p>
 					<p>{{ form_errors(form.anneeInscription) }}</p>
 					<p>{{ form_errors(form.anneeObtentionLicence) }}</p>
+					<p>{{ form_errors(form.descriptionMemoire) }}</p>
+					<p>{{ form_errors(form.systeme) }}</p>
 					<p>{{ form_errors(form.mention) }}</p>
 					<p>{{ form_errors(form.filiere) }}</p>					
 					<p>{{ form_errors(form.noteS1) }}</p>
@@ -46,7 +49,7 @@
 					<p>{{ form_errors(form.noteS5) }}</p>
 					<p>{{ form_errors(form.noteS6) }}</p>
 					<p>{{ form_errors(form.email) }}</p>
-					<p>{{ form_errors(form.motDePasse) }}</p>
+					<p>{{ form_errors(form.motDePasse) }}</p>				
 				</div>	
 		      </div>		      
 		      <div class="modal-footer">
@@ -133,6 +136,17 @@
 									        {% endfor %}
 								        </select>
 								        <input type="text" id="{{ form.ville.vars.id }}" name="{{ form.ville.vars.full_name }}" placeholder="Autre ville" value="{{ entity.ville }}" class="form-control input-sm" required style="display:none"/>
+								    </div>
+								    <div class="form-group">
+								        <label>Activité</label>	
+								        <p></p>
+								        <select id="{{ form.activite.vars.id }}" name="{{ form.activite.vars.full_name }}" class="form-control input-sm">
+								        	{% for activiteValue in activitesData %}
+								        	<option value="{{ activiteValue }}">
+								        		{{ activiteValue }}
+								        	</option>
+								        	{% endfor %}
+								        </select>						        			    
 								    </div>
 								</div>
 							</div>
@@ -224,11 +238,30 @@
 									        </select>						        			    
 									    </div>
 									</div>
+									<div class="col-xs-4">
+										<div class="form-group">
+									        <label>Système</label>	
+									        <p></p>
+									        <select id="{{ form.systeme.vars.id }}" name="{{ form.systeme.vars.full_name }}" class="form-control input-sm">
+									        	{% for systemeValue in systemesData %}
+									        	<option value="{{ systemeValue }}">
+									        		{{ systemeValue }}
+									        	</option>
+									        	{% endfor %}
+									        </select>						        			    
+									    </div>
+									</div>
 									{# <div class="col-xs-4">												    	
 						    			<div class="form-group" style="margin: 36px 0 0 0;">
 									        <label>Diplôme étranger ? &nbsp;&nbsp;<span>{{ form_widget(form.diplomeEtranger) }}</span></label>
 									    </div>
 									</div>#}
+								</div>
+								<div class="row">
+									<div class="form-group col-xs-12">
+									        <label>Description de la mémoire</label>
+									        <textarea name="{{ form.descriptionMemoire.vars.full_name }}" placeholder="" class="form-control input-sm" required></textarea>
+									</div>
 								</div>
 								<h4>Moyennes :</h4>
 								<div class="row">
@@ -341,7 +374,7 @@
 				    <div class="pager wizard">					
 						<li class="previous" style="background-color: #83A29A;color:#fff"><a href="javascript:;">Etape précedente</a></li>					
 					  	<li class="next"><a href="javascript:;">Etape suivante</a></li>
-						<li class="next finish" style="display:none;"><a href="javascript:;" style="background-color:#2A2; border:0; color:#fff">Envoyer la demande de candidateure</a></li>
+						<li class="next finish" style="display:none;"><a href="javascript:;" style="background-color:#2A2; border:0; color:#fff">Envoyer la demande de candidature</a></li>
 					</div>
 
 				</div>					

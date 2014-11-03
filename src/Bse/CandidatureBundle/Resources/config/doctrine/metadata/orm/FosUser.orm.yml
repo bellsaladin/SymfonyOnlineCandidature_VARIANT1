@@ -1,0 +1,109 @@
+FosUser:
+    type: entity
+    table: fos_user
+    uniqueConstraints:
+        UNIQ_957A6479A0D96FBF:
+            columns:
+                - email_canonical
+        username_canonical_UNIQUE:
+            columns:
+                - username_canonical
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        username:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+        usernameCanonical:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: username_canonical
+        email:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+        emailCanonical:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: email_canonical
+        enabled:
+            type: boolean
+            nullable: false
+            comment: ''
+        salt:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+        password:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+        lastLogin:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: last_login
+        locked:
+            type: boolean
+            nullable: false
+            comment: ''
+        expired:
+            type: boolean
+            nullable: false
+            comment: ''
+        expiresAt:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: expires_at
+        confirmationToken:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: confirmation_token
+        passwordRequestedAt:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: password_requested_at
+        roles:
+            type: array
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+        credentialsExpired:
+            type: boolean
+            nullable: false
+            comment: ''
+            column: credentials_expired
+        credentialsExpireAt:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: credentials_expire_at
+    lifecycleCallbacks: {  }
