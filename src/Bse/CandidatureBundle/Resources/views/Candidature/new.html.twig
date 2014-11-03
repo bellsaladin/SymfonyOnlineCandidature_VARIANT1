@@ -291,13 +291,13 @@
 									        <input type="text" id="txt_note_S4" name="{{ form.noteS4.vars.full_name }}" placeholder="ex : 10,00" class="form-control input-sm"/>	
 									    </div>
 									</div>
-									<div class="col-xs-12 col-md-4 col-lg-4">
+									<div id="div_note_S5" class="col-xs-12 col-md-4 col-lg-4">
 								        <div class="form-group">
 									        <label>Semestre 5</label>									        
 									        <input type="text" id="txt_note_S5" name="{{ form.noteS5.vars.full_name }}" placeholder="ex : 14,00" class="form-control input-sm"/>	
 								        </div>		    
 									</div>
-									<div class="col-xs-12 col-md-4 col-lg-4">
+									<div id="div_note_S6" class="col-xs-12 col-md-4 col-lg-4">
 								        <div class="form-group">
 									        <label>Semestre 6</label>									        
 									        <input type="text" id="txt_note_S6" name="{{ form.noteS6.vars.full_name }}" placeholder="ex : 10,00" class="form-control input-sm"/>	
@@ -493,6 +493,23 @@
 
 	    $('#ville').change(function () {				        
 	        $('#{{ form.ville.vars.id }}').val($('#ville').val());	        
+	    });
+
+	    {# --------------- OnChange SYSTEME D'obtention de licence ---------------  #}
+
+  		$('#{{ form.systeme.vars.id }}').change(function () {  			
+	        if($(this).val() =='LMD'){	        	
+	        	$('#div_note_S5').show();
+	        	$('#div_note_S6').show();
+	        	$('#txt_note_S5').val('');
+	        	$('#txt_note_S6').val('');
+	        }else{
+	        	$('#div_note_S5').hide();
+	        	$('#div_note_S6').hide();
+	        	{# &&&&&& --------- give 10 as value for S5 and S6 semestre to skip validaiton ------ &&&&&& #}
+	        	$('#txt_note_S5').val('10');
+	        	$('#txt_note_S6').val('10');
+	        }	        
 	    });
 
 		{# --------------- OnChange TypeDiplome & IntituleDiplome ---------------  #}
