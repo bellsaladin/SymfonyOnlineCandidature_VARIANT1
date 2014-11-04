@@ -380,9 +380,13 @@ class CandidatureController extends Controller
 
         $pdfObj = $this->container->get("white_october.tcpdf")->create();
 
-        $pdfObj->setPrintHeader(false);
-        $pdfObj->setPrintFooter(false);
+        $pdfObj->SetMargins(PDF_MARGIN_LEFT, 50, PDF_MARGIN_RIGHT);
+        $pdfObj->SetHeaderMargin(PDF_MARGIN_HEADER);
 
+        $pdfObj->setPrintHeader(true);
+        $pdfObj->setPrintFooter(false);
+        $pdfObj->setHeaderImagePath($this->get('kernel')->getRootDir().'/../web/bundles/bsecandidature/images/logo.jpg');
+        $pdfObj->setNomFaculte($this->container->getParameter('faculte_name'));
         // set some language dependent data:
         $lg = Array();
         $lg['a_meta_charset'] = 'UTF-8';        
@@ -391,7 +395,9 @@ class CandidatureController extends Controller
 
         // set some language-dependent strings (optional)
         $pdfObj->setLanguageArray($lg);
-        $pdfObj->SetFont('dejavusans', '', 12);
+        $pdfObj->SetFont('dejavusans', '', 8);
+        //$pdfObj->SetFont('helvetica', '', 9);        
+        //$pdfObj->addPage();
 
 
         // get values of fields stored as keys 

@@ -1,97 +1,48 @@
-<table style="font-size:10px">	
-	<tr style="line-height:12px"><td colspan="4"><h2>Informations générales</h2><hr/></td></tr>
+<br/><br/><br/>
+<table>
 	<tr style="line-height:20px">
 	    <td><b>Dossier n° : </b></td>
-	    <td>{{ candidature.id}}</td>
+	    <td colspan="3">{{ candidature.id}}</td>
     </tr>
 	<tr style="line-height:20px">
 	    <td><b>Prénom : </b></td>
 	    <td>{{ candidature.prenom}}</td>
 	    <td><b>Nom :</b></td>
-	    <td>{{ candidature.nom}}</td>
+	    <td>{{ candidature.nom }}</td>
     </tr>
     <tr style="line-height:20px">
 	    <td><b>CIN : </b></td>
 	    <td>{{ candidature.cin}}</td>
 	    <td><b>CNE :</b></td>
-	    <td>{{ candidature.cne}}</td>
-    </tr>
-    <tr style="line-height:20px">
-    	<td><b>Pays : </b></td>
-	    <td>{{ candidature.pays}}</td>
-	    <td><b>Ville : </b></td>
-	    <td>{{ candidature.ville}}</td>
-    </tr>
-    <tr style="line-height:20px">
-    	<td><b>Sexe : </b></td>
-	    <td>{{ candidature.sexe}}</td>
-	    <td><b>Date de naissance : </b></td>
-	    <td>{{ candidature.dateNaissance|date("d/m/Y")}}</td>
-    </tr>
-    <tr style="line-height:20px">
-    	<td><b>Adresse : </b></td>
-	    <td colspan="3">{{ candidature.adresse}}</td>	    
-    </tr>
-    <tr>    	
-	    <td colspan="4"><br/></td>
-    </tr>
+	    <td>{{ candidature.cne }}</td>
+    </tr>  
     <tr style="line-height:20px">
     	<td><b>Filière : </b></td>
-	    <td colspan="3">{{ candidature.filiere}}</td>	    
+	    <td colspan="3">{{ candidature.filiere }}</td>	    
     </tr>
-    <tr style="line-height:12px"><td colspan="4"><h2>Parcours d'étude</h2><hr/></td></tr>
-    <tr style="line-height:20px">
-	    <td><b>Etablissement d'origine : </b></td>
-	    <td>{{ candidature.etablissementOrigine}}</td>
-	    <td><b>Type du diplome :</b></td>
-	    <td>{{ candidature.typeDiplome}}</td>
+</table>
+<br/><br/>
+<p style="text-align:center"> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+<br/><br/><br/><br/>
+<table>
+	<tr style="line-height:20px">
+	    <td><b>Dossier n° : </b></td>
+	    <td colspan="3">{{ candidature.id}}</td>
     </tr>
-    <tr style="line-height:20px">
-	    <td><b>Intitulé du diplôme : </b></td>
-	    <td colspan="3">{{ candidature.intituleDiplome}}</td>	    
-    </tr>
-    <tr style="line-height:20px">
-	    <td><b>Année d'obtention du bac : </b></td>
-	    <td>{{ candidature.anneeObtentionBac}}</td>
-	    <td><b>Année de 1ère inscription à l'université :</b></td>
-	    <td>{{ candidature.anneeInscription}}</td>
+	<tr style="line-height:20px">
+	    <td><b>Prénom : </b></td>
+	    <td>{{ candidature.prenom}}</td>
+	    <td><b>Nom :</b></td>
+	    <td>{{ candidature.nom }}</td>
     </tr>
     <tr style="line-height:20px">
-	    <td><b>Année d'obtention de la licence : </b></td>
-	    <td>{{ candidature.anneeObtentionLicence}}</td>
-	    <td><b>Mention :</b></td>
-	    <td>{{ candidature.mention}}</td>
-    </tr>
-    {#<tr style="line-height:20px">
-	    <td><b>Année d'obtention de la licence : </b></td>
-	    <td>{{ candidature.anneeObtentionLicence}}</td>
-	    <td><b>Diplôme étranger :</b></td>
-	    <td>{% if candidature.diplomeEtranger == true %}Oui{% else %} Non{% endif %}</td>
-    </tr>#}
+	    <td><b>CIN : </b></td>
+	    <td>{{ candidature.cin}}</td>
+	    <td><b>CNE :</b></td>
+	    <td>{{ candidature.cne }}</td>
+    </tr>  
     <tr style="line-height:20px">
-	    <td><b>Système : </b></td>
-	    <td>{{ candidature.systeme}}</td>	    
+    	<td><b>Filière : </b></td>
+	    <td colspan="3">{{ candidature.filiere }}</td>	    
     </tr>
-    <tr style="line-height:12px"><td colspan="4"><br/><h4>Moyennes</h4><hr/></td></tr>
-    <tr style="line-height:20px">
-	    <td><b>Semestre 1: </b></td>
-	    <td>{{ candidature.noteS1|number_format(2, ',', '.') }}</td>
-	    <td><b>Semestre 2: </b></td>
-	    <td>{{ candidature.noteS2|number_format(2, ',', '.') }}</td>
-    </tr>
-    <tr style="line-height:20px">
-	    <td><b>Semestre 3: </b></td>
-	    <td>{{ candidature.noteS3|number_format(2, ',', '.') }}</td>
-	    <td><b>Semestre 4: </b></td>
-	    <td>{{ candidature.noteS4|number_format(2, ',', '.') }}</td>
-    </tr>
-    {% if candidature.systeme == 'LMD' %}
-    <tr style="line-height:20px">
-	    <td><b>Semestre 5 </b></td>
-	    <td>{{ candidature.noteS5|number_format(2, ',', '.') }}</td>
-	    <td><b>Semestre 6: </b></td>
-	    <td>{{ candidature.noteS6|number_format(2, ',', '.') }}</td>
-    </tr>
-    {% endif %}
-
 </table>		

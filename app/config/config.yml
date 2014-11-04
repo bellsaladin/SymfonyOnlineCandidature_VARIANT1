@@ -78,3 +78,6 @@ fos_user:
     user_class: Bse\CandidatureBundle\Entity\User
     from_email:        
         sender_name:    Candidature en ligne - UIT
+
+white_october_tcpdf:
+    class: 'Bse\CandidatureBundle\TCPDF\CandidaturePDF'
