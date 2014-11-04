@@ -49,6 +49,18 @@ class CandidatureController extends Controller
     }
 
     /**
+     * Candidature Procdure
+     *
+     */
+    public function procedureAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        return $this->render('BseCandidatureBundle:Candidature:procedureCandidature.html.twig');
+    }
+
+
+    /**
      * Creates a new Candidature entity.
      *
      */

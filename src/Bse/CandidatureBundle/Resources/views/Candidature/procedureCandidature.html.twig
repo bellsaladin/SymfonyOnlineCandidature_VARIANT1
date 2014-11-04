@@ -1,0 +1,63 @@
+
+{% extends 'BseCandidatureBundle::layout.html.twig' %}
+
+{% block subTitle %}Procèdure de candidature{% endblock %}
+
+{% block content %}	
+<style tyle="text/css">
+	#page-title{
+		display:none;
+	}
+</style>
+<div class="row">	
+	<div class="col-xs-12">
+		<div class="content" style="margin:0 10%;">
+			<p>&nbsp;</p>
+			<center><h3>PROCEDURE DE CANDIDATURE</h3></center>
+			{# ----------------------------------------------------------- #}
+			{# ---------------------- BEGIN : content -------------------- #}
+			{# ----------------------------------------------------------- #}
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>La proc&eacute;dure de candidature en ligne est obligatoire pour compl&eacute;ter votre candidature aux fili&egrave;res professionnelles de Type <em>Licence</em> et <em>Master</em>.</p>
+			<p>La proc&eacute;dure se d&eacute;roule sur plusieurs &eacute;tapes durant lesquelles vous aurez &agrave; fournir des informations concernant votre identit&eacute; et votre cursus sup&eacute;rieur. Il est tr&egrave;s important de les <strong>renseigner le plus soigneusement possible</strong>.</p>
+			<p>Lors de cette proc&eacute;dure le syst&egrave;me vous fournira une un num&eacute;ro de dossier et un mot de passe que vous devez noter soigneusement pour des usages ult&eacute;rieurs.</p>
+			<p>La proc&eacute;dure d&rsquo;inscription en ligne peut &ecirc;tre arr&ecirc;t&eacute;e et reprise &agrave; tout moment tant que vous n&rsquo;avez pas d&eacute;finitivement valid&eacute; votre candidature. Une fois la <strong>validation est effective</strong>, vous ne pourrez plus acc&eacute;der &agrave; vos donn&eacute;es.</p>
+			<p>Avant la validation de votre candidature, une fen&ecirc;tre r&eacute;capitule toutes les informations saisies afin de les v&eacute;rifier et &eacute;ventuellement les modifier.</p>
+			<p>Toutes les informations saisies seront utiles pour l&rsquo;&eacute;valuation de votre candidature, aussi prenez beaucoup de soin pour les renseigner.</p>
+			<p>Pour compl&eacute;ter votre proc&eacute;dure de candidature, il est obligatoire de faire parvenir &agrave; l&rsquo;administration de la facult&eacute; des sciences, <strong>dans les d&eacute;lais</strong> et selon la <strong>proc&eacute;dure adopt&eacute;e par chaque fili&egrave;re</strong>, les pi&egrave;ces justificatives de vos dipl&ocirc;mes et relev&eacute;s de notes en <strong>pr&eacute;cisant le num&eacute;ro de dossier fourni par le syst&egrave;me et le CNE </strong>sur les enveloppes.<strong>&nbsp;</strong></p>
+			<h1>&nbsp;</h1>
+			<p><strong>TRES IMPORTANT&nbsp;:</strong></p>
+			<p>Toute tricherie constat&eacute;e lors de la v&eacute;rification des informations saisies sur le syst&egrave;me avec les pi&egrave;ces justificatives, sera sanctionn&eacute;e par l&rsquo;&eacute;limination pure et simple de la candidature.</p>
+			<p>&nbsp;</p>
+			<p><strong><u>&nbsp;</u></strong></p>
+			<p><strong><u>Pi&egrave;ces justificatives &agrave; fournir&nbsp;:</u></strong></p>
+			<ul>
+			<li>Une demande de candidature adress&eacute;e &agrave; Monsieur le Doyen de la facult&eacute; des Sciences</li>
+			<li>Un CV r&eacute;cent (indiquer <strong>email</strong> et <strong>t&eacute;l&eacute;phone</strong>)</li>
+			<li>Une photo d&rsquo;identit&eacute;</li>
+			<li>Copie du bac</li>
+			<li>Copie des dipl&ocirc;mes sup&eacute;rieurs</li>
+			<li>Copie des relev&eacute;s de notes de chaque session</li>
+			<li>Copie de la CIN</li>
+			</ul>
+			{# --------------------------------------------------------- #}
+			{# ---------------------- END : content -------------------- #}
+			{# --------------------------------------------------------- #}
+
+			{# --------------------------------------------------------- #}
+			{# ---------------------- BEGIN : actions ------------------ #}
+			{# --------------------------------------------------------- #}
+			<hr/>
+			<div class="actions pull-right">
+				<a href="{{ url('bse_candidature_welcome') }}"><button type="button" id="btnLogin" class="btn btn-normal btn-sm" style="color:#000">Annuler</button></a>
+				<a href="{{ url('candidature_new', {"first": "first"}) }}"><button type="button" id="btnLogin" class="btn btn-success btn-sm">J'ai lu et J'accepte ces conditions</button></a>				
+			</div>
+			{# -------------------------------------------------------- #}
+			{# ---------------------- END : actions ------------------- #}
+			{# --------------------------------------------------------- #}
+		</div>
+	</div>		
+</div>
+<br/><br/><br/>
+{% endblock %}

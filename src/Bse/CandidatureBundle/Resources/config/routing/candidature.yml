@@ -28,3 +28,7 @@ candidature_delete:
     path:     /{id}/delete
     defaults: { _controller: "BseCandidatureBundle:Candidature:delete" }
     requirements: { _method: post|delete }
+
+candidature_procedure:
+    path:     /procedure
+    defaults: { _controller: "BseCandidatureBundle:Candidature:procedure" }
