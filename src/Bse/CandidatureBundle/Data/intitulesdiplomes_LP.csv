@@ -1,93 +1,15 @@
-LGSVI;Licence Sciences de  la Vie et de la Terre
-LGSMP;Licence Sciences de la Matière
-LGSEG;Licence Sciences Economie et Gestion
-LEANG;Licence Etudes Anglaises
-LEFRA;Licence Etudes Françaises
-LEARB;Licence Etudes Arabes
-LGSMC;Licence Sciences de la  Matière
-LGSMI;Licence Sc. Math, Infor et Applicat
-LGSTU;Licence Sciences de la Vie et de la Terre
-LGSOC;Licence Sociologie
-LEISL;Licence Etudes Islamiques
-LGSMA;Licence Sc. Math, Informatique et Applications
-LGHIC;Licence Histoire et Civilisation
-LGGEO;Licence Géographie
-LGPHI;Licence Philosophie
-DNENCG;Diplôme ENCG
-LPAGA;Licence professionnelle en Agroalimentaire
-LPMET;Licence Professionnelle en Metallurgie
-LPMAC;Licence Professionnelle  Materiaux de Construction
-LPPTC;Licence Professionnelle en Polymères Textile et colorants
-LPEVM;Licence Pro Exploitation durable &Valorisation milieu Marin
-LPLEA;Licence Professionnelle Langues Etrangéres Appliquées
-DNENCG2;Diplôme  ENCG
-MSMANAG;Master Spécialisé Management de projet Develop Activ Offshor
-MSEANG;Master Etud Lang Angl&Cul
-MSLFRA;Master de Langue Française et Diversité Linguistique
-MSGEOST;Master en Geographie Science des Territoires
-MSARBLM;Master E.Arabe: Composition de la Litterat Marocaine Moderne
-MSHISMC;Master Histoire Maghrebine Comparative Moder & Contemp
-MSSQLOG;Master Specialisé Qualité du Logiciel
-MSAAIM;Master Analyse Appliquée et Ingénierie Mathématique
-MSAMTI;Master Analyse Mathématique et Traitement de l'Information
-MSNPG;Master Neurobiologie, Pharmacologie et Génétique
-MSMARRN;Master Méthodes d' Analyse des Ressources & Risques Naturels
-MSCOBM;Master Chimie Organique, Bio-Organique et Macromoléculaire
-MSPCM;Master Physico_Chimie des Matériaux
-MSSHI;Master Specialisé Hydroinformatique
-MSPHY;Master  Sciences de la Matière Physique
-MSEUISE;Master Eaux Usées & Incidences Sanitaires &Environnementales
-MSSTMGP;Master Spé Techn Muséologie, Gést du Patrimoine Naturel
-LPDBA;Licence Professionnelle Administrateur de Bases de Données
-LPDJC;Licence Professionnelle Developpeur Java & C++
-MSRESY;Master Spécialisé Réseaux et Systèmes
-MSMIEL;Master spécialisé Micro-éléctronique
-LFDPF;Licence Droit Priv FR
 LPADP;Licence Professionnel Administrateur du Personnel
-MMPP;Master Microorganismes et Protection des Plantes
 LPASS;Licence Professionnelle Assistant social
-LPEDS;Licences Professionnelle Educateur Spécialisé (INDH)
-MSGEOES;Master Environnement et Société: Dynamiques,Interface,Territ
-DENSAK;Diplôme d'Ingénieur d'Etat de l' ENSA
-MSEAETH;Master (E.Arabe) EtudesThéatrales
-MSDSC;Master Discordance dans les Sciences de la Chariâ
-LPPAT;Licence Professionnelle Patrimoine & Tourisme
-MSIMTCQ;Master Spécialisé Ingénierie des Matériaux:Traitement,Car&CQ
-DEUSSFC;DUESS FINANCE et COMPTABILITE
-DOCSCIE;Doctorat en Sciences et Techniques
-DOCLETT;Doctorat Lettres et Sciences Humaines
-MSMCPI;Management Conduite de projets Industriels
 LPCNFI;Licence Pro Comptabilité en Normes Françaises et internation
-MSMANPO;Master Sp: Management de Projet et de Plateformes Offshoring
-MARECPM;Master (E.Arabe): Etudes dans la culture populaire marocaine
-MARLAPL;Master Linguistique Arabe et Préparation Linguistique
-MSAGRIN;Master spécialisé en Agro-industrie
-MSBTAS;Master Spécialisé en Biotechnologies alimentaires et Santé
-MSVAGR;Master Spécialisé en Valorisation des Agro-ressources
-MHCSMCM;Master Histoire Comparée des Sociétés du Moyen Age(Chrit-Mu)
-LPAII;Licence Pro: Automatique et Informatique industrielle
-LPMACB;Licence Pro: Méthodes d'analyse Chimiques et Biologiques
-LPTLB;Lic Pro: Techniques de laboratoire appliquées en biologie
-LPPAN;Licence Professionnelle: Production Animale
-LPMAT;Lic Pro Métièrs d'aménagement du territoire:
-MFICOMP;Master Finance-Comptabilité
-MSMANAC;Master Spécialisé Management Audit et Contrôle
-LPSID;Licence Pro Statistique et Informatique décisionnelle
-LPTCLT;Licence Pro Technico-Commercial:Logistique et Transport
-LPSTCC;Licence Pro:Sciences et Technologie des Ciments etCéramiques
-LPTVS;Licence Pro Techniques et Valorisation du Sol
-MSGET;Master Spécialisé: Gestion Environnementale des Territoires
-LPRTC;Licence Professionnelle Réseaux  et Télécommunications
+LPCRGEO;Licence Professionnelle Cartographie et Géomatique
+LPEDS;Licences Professionnelle Educateur Spécialisé (INDH)
+LPEVM;Licence Pro Exploitation durable &Valorisation milieu Marin
 LPGIS;Licence Pro: Gestion des Institutions à Caractère Social
-LPMEAT;xx
-LPPEE;LP Procédés d'extraction et Environnement
-MSIEE;Master Spé: Ingénierie de l'Eaux et de l'Environnement
-MSGVD;Master Spécialisé Gestion et Valorisation des Déchets
-MSCAD;Master Communication et analyse du discours
-MSIEU;Master Spécialisé: Ingénierie des  Eaux Usées
-MSTNR;Master Spécialisée Techniques Nucléaires et Radioprotection
-MSSADMP;Master Sp: Système d'aide à la décision et Management Projet
-MCBOE;Master Chimie Bio-Organique et Environnement
+LPLEA;Licence Professionnelle Langues Etrangéres Appliquées
+LPMAT;Lic Pro Métièrs d'aménagement du territoire
 LPMCU;Licence Professionnelle Médiation Culturelle
-MSMQHSE;Mast Sp: Management de qualité, hygiène, sécurité et environ
-MSETGPD;Master Sp(Formation Continu) Ecotourisme, GestionPatr DevDur
+LPMQRN;Licence Pro Management qualité des Resources Naturelles
+LPPAT;Licence Professionnelle Patrimoine & Tourisme
+LPPEE;LP Procédés d'extraction et Environnement
+LPSIGGE;LP SIG et gestion de l'espace
+LPTVS;Licence Pro Techniques et Valorisation du Sol
