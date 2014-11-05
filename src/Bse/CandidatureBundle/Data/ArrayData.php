@@ -47,15 +47,16 @@ class ArrayData
 			'الاختلاف في العلوم الشرعية',
 			'التواصل وتحليل الخطاب',
 			'سوسيولوجبا التنمية المحلية',
-			'Teaching English As A Foreign Language (TEFL)',
+			//'Teaching English As A Foreign Language (TEFL)',
 			'Master in Culture and linguistics',
 			'Géographie et Aménagement'
 		);
 
 		$data_3 = array(
-			'MARKETING ET LOGISTIQUE',
+			'Banque et Assurance',
 			'Management Audit et Contrôle',
-			'BANQUE et ASSURANCE'
+			'Logistique et Marketing : Logistique et Supply Chain',
+			'Logistique et Marketing : Marketing et Distribution'
 		);
 
 		$data = array('FS'=>$data_1, 'FL' => $data_2, 'FD' => $data_3);
