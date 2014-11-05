@@ -115,7 +115,7 @@
 								        <p></p>
 								        <select id="{{ edit_form.sexe.vars.id }}" name="{{ edit_form.sexe.vars.full_name }}" class="form-control input-sm">
 								        	<option value="M">Masculin</option>
-								        	<option value="F">Féminin</option>
+								        	<option value="F" {% if entity.sexe == 'F' %} selected {% endif %}>Féminin</option>
 								        </select>							        			    
 								    </div>
 									<div class="form-group">
@@ -275,19 +275,19 @@
 								<div class="row">
 							    	<div class="col-xs-12 col-md-4 col-lg-4">
 									    <div class="form-group">
-									        <label>Semestre 1</label>									        
+									        <label class="noteLibelle">Semestre 1</label>
 									        <input type="text" id="txt_note_S1" name="{{ edit_form.noteS1.vars.full_name }}" value="{{ entity.noteS1|number_format(2, ',', '.') }}" placeholder="ex : 13,50" class="form-control input-sm"/>	
 								        </div>
 									</div>
 									<div class="col-xs-12 col-md-4 col-lg-4">
 										<div class="form-group">
-									        <label>Semestre 2</label>									        
+									        <label class="noteLibelle">Semestre 2</label>		        
 									        <input type="text" id="txt_note_S2" name="{{ edit_form.noteS2.vars.full_name }}" value="{{ entity.noteS2|number_format(2, ',', '.') }}" placeholder="ex : 11,00" class="form-control input-sm"/>	
 									    </div>
 									</div>
 									<div class="col-xs-12 col-md-4 col-lg-4">
 										<div class="form-group">
-									        <label>Semestre 3</label>									        
+									        <label class="noteLibelle">Semestre 3</label>		        
 									        <input type="text" id="txt_note_S3" name="{{ edit_form.noteS3.vars.full_name }}" value="{{ entity.noteS3|number_format(2, ',', '.')  }}" placeholder="ex : 14,00" class="form-control input-sm"/>	
 								        </div>	    
 									</div>
@@ -295,7 +295,7 @@
 								<div class="row">
 							    	<div class="col-xs-12 col-md-4 col-lg-4">
 								        <div class="form-group">
-									        <label>Semestre 4</label>									        
+									        <label class="noteLibelle">Semestre 4</label>		        
 									        <input type="text" id="txt_note_S4" name="{{ edit_form.noteS4.vars.full_name }}" value="{{ entity.noteS4|number_format(2, ',', '.') }}" placeholder="ex : 10,00" class="form-control input-sm"/>	
 									    </div>
 									</div>
@@ -495,20 +495,38 @@
 	        {# ------ set values so that the validation would pass ------ #}
 	        $('#txt_note_S5').val('10');
 	        $('#txt_note_S6').val('10');
+	        {# ------ update libellées ----- #}
+	        var num = 1;
+        	$( ".noteLibelle" ).each(function( index ) {
+        		var exposantTxt = (num == 1)?'ère':'ème';
+				$( this ).text(num + exposantTxt + ' année :');
+				num++;
+			});
 	    {% endif %}
 
   		$('#{{ edit_form.systeme.vars.id }}').change(function () {  			
-	        if($(this).val() =='LMD'){	        	
+	        if($(this).val() =='LMD'){
 	        	$('#div_note_S5').show();
 	        	$('#div_note_S6').show();
 	        	$('#txt_note_S5').val('');
 	        	$('#txt_note_S6').val('');
+	        	var num = 1;
+	        	$( ".noteLibelle" ).each(function( index ) {
+  					$( this ).text('Moyenne ' + num + ':');
+  					num++;
+				});
 	        }else{
 	        	$('#div_note_S5').hide();
 	        	$('#div_note_S6').hide();
 	        	{# &&&&&& --------- give 10 as value for S5 and S6 semestre to skip validaiton ------ &&&&&& #}
 	        	$('#txt_note_S5').val('10');
 	        	$('#txt_note_S6').val('10');
+	        	var num = 1;
+	        	$( ".noteLibelle" ).each(function( index ) {
+	        		var exposantTxt = (num == 1)?'ère':'ème';
+  					$( this ).text(num + exposantTxt + ' année :');
+  					num++;
+				});
 	        }	        
 	    });
 

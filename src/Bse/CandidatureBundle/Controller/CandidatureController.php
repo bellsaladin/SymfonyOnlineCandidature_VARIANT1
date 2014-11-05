@@ -103,6 +103,9 @@ class CandidatureController extends Controller
             $user->setPlainPassword($form->get('motDePasse')->getData());
             $user->setEnabled(true);
             $userManager->updateUser($user);
+            // make more modifications to the database
+            $this->getDoctrine()->getManager()->flush();
+            
             // bind new entity to created user
             $entity->setFosuserId($user->getId());  
 
