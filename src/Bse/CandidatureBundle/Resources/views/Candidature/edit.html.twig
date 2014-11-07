@@ -102,7 +102,8 @@
 								    </div>
 								    <div class="form-group">
 								        <label>CNE</label>								        
-								        <input type="text" id="txt_cne" name="{{ edit_form.cne.vars.full_name }}" placeholder="ex : 30494800" value="{{ entity.cne}}" class="form-control input-sm" required/>	
+								        <input type="text" id="txt_cne" name="{{ edit_form.cne.vars.full_name }}" placeholder="ex : 30494800" value="{{ entity.cne}}" class="form-control input-sm" required/>
+								        <input type="checkbox" id="cb_disable_cne" /> Cochez si vous n'avez pas de CNE
 								    </div>	
 								    <div class="form-group">
 								        <label>{{ form_label(edit_form.adresse) }}</label>	        
@@ -466,6 +467,21 @@
   		$( "#txt_note_S4" ).rules( "add", {required: true, range:[10, 20]} );
   		$( "#txt_note_S5" ).rules( "add", {required: true, range:[10, 20]} );
   		$( "#txt_note_S6" ).rules( "add", {required: true, range:[10, 20]} );
+
+  		{% if entity.cne == 'PAS DE CNE' %}
+  			$('#cb_disable_cne').prop('checked', true);
+  			$("#txt_cne").attr('readonly', true);
+  		{% endif %}
+  		
+  		$('#cb_disable_cne').change(function () {
+	        if($(this).is(":checked")) {
+	        	$("#txt_cne").val('PAS DE CNE');
+		        $("#txt_cne").attr('readonly', true);
+		    }else{
+		    	$("#txt_cne").attr('readonly', false);
+		    	$("#txt_cne").val('');
+		    }
+	    });
 
   		{# --------------- OnChange PAYS & VILLE ---------------  #}  		
 

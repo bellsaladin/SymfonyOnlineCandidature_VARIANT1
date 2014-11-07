@@ -98,7 +98,8 @@
 								    </div>
 								    <div class="form-group">
 								        <label>CNE</label>								        
-								        <input type="text" id="txt_cne" name="{{ form.cne.vars.full_name }}" placeholder="ex : 30494800" class="form-control input-sm" required/>	
+								        <input type="text" id="txt_cne" name="{{ form.cne.vars.full_name }}" placeholder="ex : 30494800" class="form-control input-sm" required/>
+								        <input type="checkbox" id="cb_disable_cne" /> Cochez si vous n'avez pas de CNE
 								    </div>	
 								    <div class="form-group">
 								        <label>{{ form_label(form.adresse) }}</label>
@@ -474,7 +475,17 @@
         	return value == $("#txt_motDePasse").val(); 
         }, 'La confirmation du mot de passe ne correspond pas au mot de passe renseigné');
 
-		$( "#txt_motDePasseConfirmation" ).rules( "add", {required:true, passwordCheck: true} );  			
+		$( "#txt_motDePasseConfirmation" ).rules( "add", {required:true, passwordCheck: true} );
+
+		$('#cb_disable_cne').change(function () {
+	        if($(this).is(":checked")) {
+		        $("#txt_cne").attr('readonly', true);
+		        $("#txt_cne").val('PAS DE CNE');		        
+		    }else{
+		    	$("#txt_cne").attr('readonly', false);
+		    	$("#txt_cne").val('');
+		    }
+	    });			
 
 		{# --------------- OnChange PAYS & VILLE ---------------  #}
 
