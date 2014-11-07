@@ -203,7 +203,7 @@
 									        <label>Année d'obtention du bac</label>	
 									        <p></p>
 									        <select id="{{ edit_form.anneeObtentionBac.vars.id }}" name="{{ edit_form.anneeObtentionBac.vars.full_name }}" class="form-control input-sm">
-									        	{% for i in 2010..2000 %}
+									        	{% for i in 2011..1980 %}
 									        	<option value="{{ i }}" {% if  i == entity.anneeObtentionBac %} selected {% endif %}>{{ i }}</option><?php } ?>
 									        	{% endfor %}
 									        </select>						        			    
@@ -214,7 +214,7 @@
 									        <label>Année de 1ère inscription à l'université</label>	
 									        <p></p>
 									        <select id="{{ edit_form.anneeInscription.vars.id }}" name="{{ edit_form.anneeInscription.vars.full_name }}" class="form-control input-sm">
-									        	{% for i in 2012..2005 %}
+									        	{% for i in 2012..1980 %}
 									        	<option value="{{ i }}" {% if  i == entity.anneeInscription %} selected {% endif %}>{{ i }}</option><?php } ?>
 									        	{% endfor %}
 									        </select>						        			    
@@ -225,7 +225,7 @@
 									        <label>Année d'obtention de la licence</label>	
 									        <p></p>
 									        <select id="{{ edit_form.anneeObtentionLicence.vars.id }}" name="{{ edit_form.anneeObtentionLicence.vars.full_name }}" class="form-control input-sm">
-									        	{% for i in 2013..2005 %}
+									        	{% for i in 2014..1980 %}
 									        	<option value="{{ i }}" {% if  i == entity.anneeObtentionLicence %} selected {% endif %}>{{ i }}</option><?php } ?>
 									        	{% endfor %}
 									        </select>						        			    
@@ -267,7 +267,7 @@
 								</div>
 								<div class="row">
 									<div class="form-group col-xs-12">
-								        <label>Description de la mémoire</label>
+								        <label>Intitulé du projet de fin d'études</label>
 								        <textarea name="{{ edit_form.descriptionMemoire.vars.full_name }}" placeholder="" class="form-control input-sm" required>{{ entity.descriptionMemoire}}</textarea>
 									</div>
 								</div>
@@ -357,7 +357,7 @@
 						    		{# ##############################################################################}
 						    		{# ###### Give values to 'email' and 'motDePasse' field to skip validation #### #}
 						    		{# ##############################################################################}
-						    		<input type="hidden" name="{{ edit_form.email.vars.full_name }}" value="somemail@domain.com"/>
+						    		<input type="hidden" name="{{ edit_form.email.vars.full_name }}" value="{{ entity.email}}"/>
 								    <input type="hidden" name="{{ edit_form.motDePasse.vars.full_name }}" value="123"/>	
 									{# ##############################################################################}
 						    		{# ###### Give values to 'email' and 'motDePasse' field to skip validation #### #}
