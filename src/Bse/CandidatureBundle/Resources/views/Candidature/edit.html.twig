@@ -204,7 +204,7 @@
 									        <label>Année d'obtention du bac</label>	
 									        <p></p>
 									        <select id="{{ edit_form.anneeObtentionBac.vars.id }}" name="{{ edit_form.anneeObtentionBac.vars.full_name }}" class="form-control input-sm">
-									        	{% for i in 2011..1980 %}
+									        	{% for i in 2011..1950 %}
 									        	<option value="{{ i }}" {% if  i == entity.anneeObtentionBac %} selected {% endif %}>{{ i }}</option><?php } ?>
 									        	{% endfor %}
 									        </select>						        			    
@@ -215,7 +215,7 @@
 									        <label>Année de 1ère inscription à l'université</label>	
 									        <p></p>
 									        <select id="{{ edit_form.anneeInscription.vars.id }}" name="{{ edit_form.anneeInscription.vars.full_name }}" class="form-control input-sm">
-									        	{% for i in 2012..1980 %}
+									        	{% for i in 2012..1950 %}
 									        	<option value="{{ i }}" {% if  i == entity.anneeInscription %} selected {% endif %}>{{ i }}</option><?php } ?>
 									        	{% endfor %}
 									        </select>						        			    
@@ -226,7 +226,7 @@
 									        <label>Année d'obtention de la licence</label>	
 									        <p></p>
 									        <select id="{{ edit_form.anneeObtentionLicence.vars.id }}" name="{{ edit_form.anneeObtentionLicence.vars.full_name }}" class="form-control input-sm">
-									        	{% for i in 2014..1980 %}
+									        	{% for i in 2014..1950 %}
 									        	<option value="{{ i }}" {% if  i == entity.anneeObtentionLicence %} selected {% endif %}>{{ i }}</option><?php } ?>
 									        	{% endfor %}
 									        </select>						        			    
