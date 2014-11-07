@@ -2,9 +2,9 @@ candidature:
     path:     /
     defaults: { _controller: "BseCandidatureBundle:Candidature:index" }
 
-candidature_show:
-    path:     /{id}/show
-    defaults: { _controller: "BseCandidatureBundle:Candidature:show" }
+#candidature_s:
+#    path:     /{id}/s_s987321e
+#    defaults: { _controller: "BseCandidatureBundle:Candidature:show" }
 
 candidature_new:
     path:     /new/{first}
@@ -24,10 +24,10 @@ candidature_update:
     defaults: { _controller: "BseCandidatureBundle:Candidature:update" }
     requirements: { _method: post|put }
 
-candidature_delete:
-    path:     /{id}/delete
-    defaults: { _controller: "BseCandidatureBundle:Candidature:delete" }
-    requirements: { _method: post|delete }
+#candidature_d:
+#    path:     /{id}/d_s987321e
+#    defaults: { _controller: "BseCandidatureBundle:Candidature:delete" }
+#    requirements: { _method: post|delete }
 
 candidature_procedure:
     path:     /procedure
