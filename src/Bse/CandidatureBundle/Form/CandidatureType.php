@@ -22,7 +22,7 @@ class CandidatureType extends AbstractType
             ->add('email')            
             ->add('dateNaissance', 'birthday',
                    array( 'empty_value' => array('year' => 'Année', 'month' => 'Mois', 'day' => 'Jour'),
-                          'years'=>range(1980, date('Y') - 14)))
+                          'years'=>range(1950, date('Y') - 14)))
             ->add('pays')  
             ->add('ville')
             ->add('adresse')  
